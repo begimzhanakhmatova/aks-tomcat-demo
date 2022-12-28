@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: begimzhanakhmatovaakstomcatdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: begimzhanakhmatovaakstomcatdemo
+  template:
+    metadata:
+      labels:
+        app: begimzhanakhmatovaakstomcatdemo 
+    spec:
+      containers:
+        - name: begimzhanakhmatovaakstomcatdemo 
+          image: tomcatcontainerregistry.azurecr.io/begimzhanakhmatovaakstomcatdemo
+          ports:
+          - containerPort: 8080
