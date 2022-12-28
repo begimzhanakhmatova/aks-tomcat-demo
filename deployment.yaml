@@ -13,7 +13,7 @@ spec:
         app: aks-tomcat-demo 
     spec:
       containers:
-        - name: sampleapp 
+        - name: aks-tomcat-demo 
           image: tomcatcontainerregistry.azurecr.io/aks-tomcat-demo:60
           ports:
-          - containerPort: 80
+          - containerPort: 8080
