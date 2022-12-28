@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tomcat
+  name: aks-tomcat-demo
 spec:
   replicas: 1
   selector:
     matchLables: 
-      app: tomcat
+      app: aks-tomcat-demo
   template:
     metadata:
       labels:
-        app: tomcat
+        app: aks-tomcat-demo
     spec:
       containers:
         - name: tomcat
-          image: advanapocregistry.azurecr.io/tomcat
+          image: tomcatcontainerregistry.azurecr.io/begimzhanakhmatova/aks-tomcat-demo:60
           ports:
           - containerPort: 8080
