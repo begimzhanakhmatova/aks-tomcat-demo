@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   name: aks-tomcat-demo
 spec:
-  replicas: #replicaNo#
+  replicas: 1
   selector:
-    matchLabels:
-      app: aks-tomcat-demo
+     matchLabels:
+       app: aks-tomcat-demo
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: aks-tomcat-demo 
-          image: tomcatcontainerregistry.azurecr.io/aks-tomcat-demo:60
+          image: tomcatcontainerregistry.azurecr.io/aks-tomcat-demo
           ports:
           - containerPort: 8080
