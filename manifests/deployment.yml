@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akstomcatdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akstomcatdemo
+  template:
+    metadata:
+      labels:
+        app: akstomcatdemo 
+    spec:
+      containers:
+        - name: akstomcatdemo 
+          image: aksdemoconr.azurecr.io/akstomcatdemo
+          ports:
+          - containerPort: 8080
